@@ -11,8 +11,7 @@ class Backer
   
   def back_project(project)
     @backed_projects << project
-    if @backers.detect { |person| person == @name }
-      
+    @backers << @name unless @backers.detect { |person| person == @name }
   end
   
 end
