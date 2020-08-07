@@ -12,7 +12,6 @@ class Backer
   def back_project(project)
     @backed_projects << project
     project.backers << self unless project.backers.include?(self)
-    #@backers << @name unless @backers.find { |person| person == @name }
   end
   
 end
